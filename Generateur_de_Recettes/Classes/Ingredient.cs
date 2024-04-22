@@ -10,15 +10,14 @@ public class Ingredient
 
     public Ingredient()
     {
-        Name = "";
-        Category = IngredientCategory.Other;
-        AisleCategory = Aisle.Other;
     }
     
-    public Ingredient(string initName, IngredientCategory initIngredientCategory, Aisle initAisleCategory)
+    public Ingredient(string initName)
     {
         Name = initName;
-        Category = initIngredientCategory;
-        AisleCategory = initAisleCategory;
+        Category = IngredientCategory.Other;
+        AisleCategory = Aisle.Other;
+        
+        Database.ListIngredients.Add(this);
     }
 }
